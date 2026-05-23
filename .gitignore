@@ -1,13 +1,8 @@
-# Claude Code extension files
+# Claude Code extension files (all tracked for open source)
 .claude/
-!.claude/CLAUDE.md
 
 # Chat files (contain sensitive info)
 chat*.txt
-
-# MCP servers - implementation code
-src/mcp/**/*.js
-!src/mcp/**/*.md
 
 # Node.js
 node_modules/

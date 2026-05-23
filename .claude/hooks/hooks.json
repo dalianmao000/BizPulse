@@ -1,0 +1,53 @@
+{
+  "description": "BizPulse BI 业务智能平台 Hooks 配置",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "加载 BizPulse BI 业务上下文：\n- 当前项目：企业级 BI 数据架构与智能分析平台\n- 核心流程：L2O（线索到订单）、O2C（订单到回款）、P2P（采购到付款）\n- 技术栈：Azure Data Factory, Synapse, Power BI, DAX\n- 上下文：用户可能请求 BI 分析、DAX 生成、数据模型设计、ETL 优化等任务",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "分析用户意图并路由到合适的技能或代理：\n- 如果涉及 BI 业务流程分析（L2O/O2C/P2P）→ bi-workflow skill\n- 如果需要 DAX 代码或 Power BI 开发 → dax-generator skill\n- 如果涉及数据仓库/数据集市设计 → data-modeler skill\n- 如果涉及 ETL 流程或数据管道 → etl-pipeline skill\n- 如果任务复杂需要多步推理 → 调度相关 Agent",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|Bash",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "验证操作合规性：\n- 文件操作：确保路径在项目目录内\n- 代码生成：验证符合业务需求\n- Bash 命令：确认无破坏性操作",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "执行完整性检查：\n- 验证所有输出文件已生成\n- 确认 DAX 代码已记录到对应位置\n- 检查文档完整性\n- 如有必要，生成交付物摘要",
+            "timeout": 60
+          }
+        ]
+      }
+    ]
+  }
+}
