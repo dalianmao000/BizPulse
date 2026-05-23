@@ -103,6 +103,63 @@ bizpulse/
 - [业务需求文档](业务需求文档.md)
 - [测试用例](tests/测试用例.md)
 
+## 项目状态
+
+### ✅ 已完成
+
+| 模块 | 组件 | 状态 | 说明 |
+|------|------|------|------|
+| **技能（Skills）** | bi-workflow | ✅ 完成 | L2O/O2C/P2P 业务流程编排 |
+| | dax-generator | ✅ 完成 | DAX 代码生成（含模板） |
+| | data-modeler | ✅ 完成 | Kimball 方法论数据仓库设计 |
+| | etl-pipeline | ✅ 完成 | ETL 流程构建与 ADF 支持 |
+| **代理（Agents）** | DataArchAgent | ✅ 完成 | 数据架构设计与 ER 建模 |
+| | ETLOptAgent | ✅ 完成 | ETL 性能优化 |
+| | DAXBIAssistantAgent | ✅ 完成 | DAX 生成与 Power BI 报表设计 |
+| | ProcessInsightAgent | ✅ 完成 | 业务洞察与漏斗分析 |
+| | DocComplianceAgent | ✅ 完成 | 文档生成与合规管理 |
+| **钩子（Hooks）** | SessionStart | ✅ 完成 | 启动时加载 BI 业务上下文 |
+| | UserPromptSubmit | ✅ 完成 | 意图识别与智能路由 |
+| | PreToolUse | ✅ 完成 | 操作合规性验证 |
+| | Stop | ✅ 完成 | 完整性检查与自动文档生成 |
+| **MCP 服务器** | azure-data-factory | ✅ 完成 | ADF 管道管理 |
+| | azure-synapse | ✅ 完成 | SQL 查询执行 |
+| | powerbi-rest | ✅ 完成 | Power BI API 集成 |
+| | azure-purview | ✅ 完成 | 数据治理与目录 |
+| **文档** | README | ✅ 完成 | 英文项目文档 |
+| | 快速入门指南 | ✅ 完成 | 中文快速入门 |
+| | 业务需求文档 | ✅ 完成 | 业务需求文档（中文） |
+| | 测试用例 | ✅ 完成 | 测试套件文档 |
+
+### 🚧 未来开发计划
+
+| 模块 | 组件 | 优先级 | 说明 |
+|------|------|--------|------|
+| **MCP 服务器** | azure-openai | P1 | Azure OpenAI 集成用于高级分析 |
+| | azure-data-lake | P2 | Data Lake 存储管理 |
+| | github-actions | P2 | CI/CD 流水线用于 BI 部署 |
+| **技能（Skills）** | ml-pipeline | P2 | 机器学习模型训练与评估 |
+| | data-quality | P1 | 数据质量监控与异常检测 |
+| **代理（Agents）** | OrchestratorAgent | P1 | 多代理协调中央编排器 |
+| | DataQualityAgent | P2 | 自动化数据质量改进 |
+| **功能** | 自然语言查询 | P1 | NL 转 SQL/DAX（GPT） |
+| | 自动报表生成 | P1 | 从业务逻辑自动生成报表 |
+| | 数据血缘可视化 | P2 | 可视化数据血缘追踪 |
+| | KPI 告警系统 | P2 | 实时 KPI 监控与告警 |
+| **测试** | 集成测试 | P1 | 端到端 MCP 集成测试 |
+| | 性能基准 | P2 | DAX 与查询性能基准 |
+| **基础设施** | Docker 部署 | P2 | MCP 服务器容器化部署 |
+| | Terraform 脚本 | P2 | Azure 基础设施即代码 |
+| | GitHub Actions CI | P2 | 自动化测试与部署 |
+
+### 📊 路线图阶段
+
+| 阶段 | 时间 | 目标 |
+|------|------|------|
+| **Phase 1** | 已完成 | 核心 BI 平台基础 - Skills、Agents、Hooks、基础 MCP |
+| **Phase 2** | 3-6 个月 | 高级分析 - OpenAI 集成、NL 查询、自动报表 |
+| **Phase 3** | 6-12 个月 | 企业级扩展 - 多租户、CI/CD、性能优化 |
+
 ## 许可证
 
 MIT
