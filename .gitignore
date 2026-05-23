@@ -1,0 +1,58 @@
+# Claude Code extension files
+.claude/
+!.claude/CLAUDE.md
+
+# Chat files (contain sensitive info)
+chat*.txt
+
+# MCP servers - implementation code
+src/mcp/**/*.js
+!src/mcp/**/*.md
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Test
+tests/output/
+coverage/
+
+# Build
+dist/
+build/
+*.tgz
+
+# Environment
+.env
+.env.local
+.env.*.local
+.envrc
+
+# OS
+Thumbs.db
+
+# Sensitive files
+*.pem
+*.key
+credentials.json
+secrets.json
+
+# Temporary files
+*.tmp
+*.temp
+*.bak

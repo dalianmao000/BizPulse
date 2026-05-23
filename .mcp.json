@@ -1,0 +1,43 @@
+{
+  "mcpServers": {
+    "azure-data-factory": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${ClaudePluginRoot}/src/mcp/azure-data-factory/index.js"],
+      "env": {
+        "AZURE_SUBSCRIPTION_ID": "${AZURE_SUBSCRIPTION_ID}",
+        "AZURE_RESOURCE_GROUP": "${AZURE_RESOURCE_GROUP}",
+        "AZURE_ADF_NAME": "${AZURE_ADF_NAME}",
+        "AZURE_CLIENT_ID": "${AZURE_CLIENT_ID}",
+        "AZURE_CLIENT_SECRET": "${AZURE_CLIENT_SECRET}",
+        "AZURE_TENANT_ID": "${AZURE_TENANT_ID}"
+      }
+    },
+    "powerbi-rest": {
+      "type": "http",
+      "url": "https://api.powerbi.com/v1.0/myorg",
+      "headers": {
+        "Authorization": "Bearer ${POWERBI_TOKEN}"
+      }
+    },
+    "azure-synapse": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${ClaudePluginRoot}/src/mcp/azure-synapse/index.js"],
+      "env": {
+        "AZURE_SYnapse_WORKSPACE": "${AZURE_SYnapse_WORKSPACE}",
+        "AZURE_SYnapse_POOL": "${AZURE_SYnapse_POOL}",
+        "AZURE_CLIENT_ID": "${AZURE_CLIENT_ID}",
+        "AZURE_CLIENT_SECRET": "${AZURE_CLIENT_SECRET}",
+        "AZURE_TENANT_ID": "${AZURE_TENANT_ID}"
+      }
+    },
+    "azure-purview": {
+      "type": "http",
+      "url": "https://${PURVIEW_ACCOUNT}.purview.azure.com",
+      "headers": {
+        "Authorization": "Bearer ${PURVIEW_TOKEN}"
+      }
+    }
+  }
+}

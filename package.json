@@ -1,0 +1,29 @@
+{
+  "name": "bizpulse",
+  "version": "1.0.0",
+  "description": "AI-powered BI business intelligence platform built on Claude Code extensions",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/runner.js",
+    "lint": "eslint src/**/*.js",
+    "fmt": "prettier --write \"**/*.md\" \"src/**/*.js\""
+  },
+  "keywords": [
+    "bi",
+    "business-intelligence",
+    "claude-code",
+    "data-architecture",
+    "dax",
+    "powerbi",
+    "azure",
+    "etl",
+    "data-warehouse"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
